@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale-1, shrink-to-fit=no"
+    />
+    <title>Players</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+      </style>    
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/playersstyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Real People</h1>
+      <nav class="nav-collapse">
+        <div class="links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="npcs.html">NPCS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main class="players">
+      <div class="elm player">
+        <div class="overlay">
+          <a href="elm.html">ELM</a>
+        </div>
+      </div>
+      <div class="fillip player">
+        <div class="overlay">
+          <a href="fillip.html">FILLIP</a>
+        </div>
+      </div>
+      <div class="killari player">
+        <div class="overlay">
+          <a href="../players/killari.html">KILLARI</a>
+        </div>
+      </div>
+      <div class="ricard player">
+        <div class="overlay">
+          <a href="ricard.html">RICARD</a>
+        </div>
+      </div>
+      <div class="sybella player">
+        <div class="overlay">
+          <a href="sybella.html">SYBELLA</a>
+        </div>
+      </div>
+      <div class="zippy player">
+        <div class="overlay">
+          <a href="zippy.html">ZIPPY</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>© COMP 126</p>
+    </footer>
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 50,                  // Integer: Speed of the transition, in milliseconds
+        label: "≡",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+  </body>

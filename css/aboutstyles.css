@@ -1,0 +1,12 @@
+main{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main p{
+    margin:7em;
+    padding:1em;
+    background-color: #785964;
+    border-radius: 8px;;
+}

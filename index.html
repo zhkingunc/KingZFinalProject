@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale-1, shrink-to-fit=no"
+    />
+    <title>Home</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+      </style>    
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/indexstyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Real People</h1>
+      <nav class="nav-collapse">
+        <div class="links">
+          <ul>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="npcs.html">NPCS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="bigphoto">
+        <div class="gradient">
+          <h2>WELCOME IN</h2>
+          <a href="about.html" class="button1"><p>Learn More</p></a>
+        </div>
+      </div>
+      <div class="pccmain section">
+        <div class="overlay">
+          <h3>PLAYERS</h3>
+          <a href="players.html" class="button1"><p>Learn More</p></a>
+        </div>
+      </div>
+      <div class="npcmain section">
+        <div class="overlay">
+          <h3>NPCS</h3>
+          <a href="npcs.html" class="button1"><p>Learn More</p></a>
+        </div>
+      </div>
+      <div class="rcmain section">
+        <div class="overlay">
+          <h3>REFERENCE</h3>
+          <a href="reference.html" class="button1"><p>Learn More</p></a>
+        </div>
+      </div>
+      <footer>
+        <p>© COMP 126</p>
+      </footer>
+    </main>
+    
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 50,                  // Integer: Speed of the transition, in milliseconds
+        label: "≡",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+
+  </body>
+</html>

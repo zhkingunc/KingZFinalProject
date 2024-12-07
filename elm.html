@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale-1, shrink-to-fit=no"
+    />
+    <title>Elm</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+      </style>    
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/elmstyles.css" rel="stylesheet" />
+    <link href="css/itemstyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Real People</h1>
+      <nav class="nav-collapse">
+        <div class="links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="npcs.html">NPCS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="entrance">
+        <div class="overlay">
+          <h1>ELM</h1>
+          <h3>Played by RHYS</h3>
+        </div>
+      </div>
+      <div class="collapsibles">
+        <div class="backstory">
+          <button type="button" class="collapsible">Rhys's Backstory Document</button>
+          <div class="content">Elm is a 19 year old changeling male who almost always takes the form of a young, unassuming half-elf with blue eyes and messy brown hair. As a small child, he was left at the gate of ________ (large druid grove) and found by one of the elders, Elder Redwood. Redwood took Elm in as one of his own, but soon realized that Elm was not in fact an elf or even a half-elf, but  instead a changeling. Knowing that the others would never accept a changeling as part of the grove, Redwood ordered Elm to never show his true form and only ever present as a half-elf. (Redwood thought it would be easier to pass as a half-elf rather than full elf in the long run because of the difference in aging speed between changelings and elves).  </div>
+        </div>
+        <div class="notes">
+          <button type="button" class="collapsible">Personal Notes</button>
+          <div class="content">Elm "met" Sybella when Kiran got injured while the family was travelling, and had to stop at the grove for supplies because they were in the middle of nowhere. Elm was 7 at the time, he played with Kiran a bit.
+            Elm is of Peurie descent. </div>
+        </div>
+        <div class="npcs">
+          <button type="button" class="collapsible">NPCs</button>
+          <div class="content">
+            <ul>
+              <li>Redwood</li>
+              <li>Nightshade</li>
+              <li>Jiec and Sarx</li>
+              <li>Lady Althea</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>© COMP 126</p>
+    </footer>
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 50,                  // Integer: Speed of the transition, in milliseconds
+        label: "≡",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+    <!-- Script from W3 Schools -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+  </body>

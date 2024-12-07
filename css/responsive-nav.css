@@ -1,0 +1,33 @@
+/*! responsive-nav.js 1.0.39 by @arielsalminen */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-collapse li {
+  width: 100%;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  display: flex;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+@media screen and (min-width: 750px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

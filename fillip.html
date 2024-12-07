@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale-1, shrink-to-fit=no"
+    />
+    <title>Fillip</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+      </style>    
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/itemstyles.css" rel="stylesheet" />
+    <link href="css/fillipstyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Real People</h1>
+      <nav class="nav-collapse">
+        <div class="links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="npcs.html">NPCS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="entrance">
+        <div class="overlay">
+          <h1>FILLIP</h1>
+          <h3>Played by Alex</h3>
+        </div>
+      </div>
+      <div class="collapsibles">
+        <div class="backstory">
+          <button type="button" class="collapsible">Alex's Backstory Document</button>
+          <div class="content">Fillip never really knew his father, he left when he was far too young to remember anything. His mother was a sweet woman who was burnt out, lonely, and struggled to fill the hole that Fillips father left when he left her. Fillip didn’t hate his dad, in fact he believed his dad to be dead. Its easier to think his dad died than to think he would leave his mother the way he did.  </div>
+        </div>
+        <div class="notes">
+          <button type="button" class="collapsible">Personal Notes</button>
+          <div class="content">Fillip's dad, Otyx, is the Empyrean son of Euctyl, the Peurie god of oppression and misery. Otyx was born shortly after the collapse of the Peurie pantheon, by way of one of Euctyl's servants. He lived with his father in Hades for many years, only occasionally leaving to do his father's bidding in the mortal realm. On one such trip, he encountered Caragh, a Peurie woman living in Taraias. She was naïve and charming, and Otyx fell for her. Unfortunately, Caragh was a "non-believer AKA worshipped the Faerunian pantheon. As such, Euctyl did not approve of the relationship, and banished Otyx.  </div>
+        </div>
+        <div class="npcs">
+          <button type="button" class="collapsible">NPCs</button>
+          <div class="content">
+            <ul>
+              <li>Otyx</li>
+              <li>Caragh</li>
+              <li>Euctyl</li>
+              <li>Thulia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>© COMP 126</p>
+    </footer>
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 50,                  // Integer: Speed of the transition, in milliseconds
+        label: "≡",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+    <!-- Script from W3 Schools -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+  </body>

@@ -1,0 +1,124 @@
+
+/*color palette:
+  background: #101419
+  primary: #1B2F33
+  secondary: #785964
+  text: aliceblue
+  accent:#A2AD59
+*/
+
+
+main{
+  display:grid;
+  background:#101419;
+  grid-template-columns: 1fr;
+  grid-template-rows: 145vw 70vw 70vw 70vw;
+  grid-template-areas: 
+  "entrance"
+  "pccard"
+  "npcard"
+  "rcard";
+}
+
+.bigphoto{
+  grid-area:entrance;
+  background-image:url("../img/knight.png");
+  background-position: center;
+  background-size:cover;
+  margin-bottom:1em;
+
+  .gradient{
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #101419, rgba(16, 20, 25, 0.285));
+  }
+  .gradient h2 {
+    text-align:center;
+    font-size: 3.5em;
+    margin:0;
+  }
+
+}
+
+
+.section{ 
+  margin:0 1em 1em 1em;
+  border-radius:10px;
+  background-position: center;
+  background-size:cover;
+  border:3px solid #785964;
+}
+
+.section .button1{
+  padding:10px 40px;
+}
+
+.overlay{
+  width: 100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.pccmain{
+  grid-area:pccard;
+  background-image:url("../img/loud.png");
+}
+
+.npcmain{
+  grid-area:npcard;
+  background-image:url("../img/tamara.jpg");
+}
+
+.rcmain{
+  grid-area:rcard;
+  background-image:url("../img/crystal.JPG");
+}
+
+footer{
+  background-color:#1B2F33;
+  display:flex;
+  align-items: flex-end;
+  padding:2rem;
+  padding-bottom:0rem;
+}
+
+@media screen and (min-width: 750px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120% 60% 20%;
+    grid-template-areas: 
+    "entrance entrance entrance"
+    "pccard npcard rcard"
+    "footer footer footer";
+
+  }
+  header{
+    margin:0;
+  }
+
+  footer{
+    grid-area:footer;
+  }
+
+  .bigphoto{
+    background-image:url("../img/landscapem.jpg");
+    background-position: center;
+    background-size:cover;
+    margin-bottom:1em;
+  }
+  .section{
+    margin:0 1em 1em 1em;
+    
+  }
+  
+}
+

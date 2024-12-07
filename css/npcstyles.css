@@ -1,0 +1,70 @@
+header{
+  margin-bottom: 0;
+}
+
+.NPCs {
+  display: grid;
+  grid-auto-rows: 18em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.NPC {
+  border: 2px solid #785964;
+  border-radius: 0.75rem;
+  margin: 0.5em;
+  text-align: center;
+  background-position: center;
+  background-size:cover;
+}
+
+.NPC a {
+  color: aliceblue;
+  padding: 0.5rem;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: 55px;
+  font-family:'Cinzel';
+}
+
+.section{ 
+  margin:0 1em 1em 1em;
+  border:3px solid #785964;
+}
+
+
+.overlay{
+  width: 100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.casper {
+  background-image:url("../img/casper.jpg");
+}
+
+.dorothy {
+  background-image:url("../img/dorothy.jpg");
+  background-position: top;
+}
+
+.eudora {
+  background-image:url("../img/eudora.jpg");
+  background-position: top;
+}
+
+.euctyl {
+  background-image:url("../img/euctyl.jpg");
+  background-position: top;
+}
+
+.panouna {
+  background-image:url("../img/panouna.jpg");
+}
+
+.rhaelgrottsel {
+  background-image:url("../img/rhaelgrottsel.jpg");
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale-1, shrink-to-fit=no"
+    />
+    <title>Sybella</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+      </style>    
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/sybellastyles.css" rel="stylesheet" />
+    <link href="css/itemstyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <script src="js/responsive-nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Real People</h1>
+      <nav class="nav-collapse">
+        <div class="links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="npcs.html">NPCS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="entrance">
+        <div class="overlay">
+          <h1>SYBELLA</h1>
+          <h3>Played by Rebecca</h3>
+        </div>
+      </div>
+      <div class="collapsibles">
+        <div class="backstory">
+          <button type="button" class="collapsible">Rebecca's Backstory Document</button>
+          <div class="content">Sybella was purchased to serve as a companion doll for Artor Belmont, a traveling healer. Sybella and Artor spent years together traveling Adrellia, exploring nature and cultures for inventions and advancements for medical supplies and treatments. After years, Artor’s parents called him back to Flutone to inherit the family mansion as they wanted to spend time with their son before they kicked the bucket and wanted to see him settle down, get married and all that jazz while they were still there to see it. Artor was a little upset because he enjoyed the nomadic style that he had, and did not want to part ways with Sybella as they had grown close through their adventures. but he figured he could open a practice in town with Sybella acting as a nurse. </div>
+        </div>
+        <div class="notes">
+          <button type="button" class="collapsible">Personal Notes</button>
+          <div class="content">Inanimate Doll: The body of a living doll with its glass heart removed. Unnerving. Every 5 minutes you’re within close eyeshot of the doll, roll a wisdom saving throw. Upon failure, creatures become frightened for 5 minutes. If a player doll sleeps within close eyeshot of the doll, the inanimate may try to remove their heart glass while they rest. </div>
+        </div>
+        <div class="npcs">
+          <button type="button" class="collapsible">NPCs</button>
+          <div class="content">
+            <ul>
+              <li>Artor</li>
+              <li>Kiran</li>
+              <li>Lattimer</li>
+              <li>Cookie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>© COMP 126</p>
+    </footer>
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 50,                  // Integer: Speed of the transition, in milliseconds
+        label: "≡",                    // String: Label for the navigation toggle
+        insert: "before",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+    <!-- Script from W3 Schools -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+  </body>
